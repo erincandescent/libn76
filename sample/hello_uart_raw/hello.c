@@ -77,7 +77,7 @@ void main() {
     }
 }
 
-void putchar (char c)  {
+int putchar (int c)  {
     if (c == '\n') {
         while (!TI);
         SBUF = '\r';
@@ -86,4 +86,6 @@ void putchar (char c)  {
     while (!TI);
     SBUF = c;
     TI = 0;
+
+    return c;
 }
